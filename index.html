@@ -11,88 +11,180 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-    <nav>
-        <ul class="menuHorizontal">
-            <li>
-                <a href="#">About</a>
-                <ul class="menuVertical">
-                    <li> <a href="#"></a>seccion acerca de mi</li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Habilidades</a>
-                <ul class="menuVertical">
-                    <li> <a href="#"></a>Desarrollo</li>
-                    <li> <a href="#"></a>Analisis</li>
-                    <li> <a href="#"></a>Despliegue</li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Herramientas</a>
-                <ul class="menuVertical">
-                    <li> <a href="#"></a>Html</li>
-                    <li> <a href="#"></a>Css</li>
-                    <li> <a href="#"></a>C#</li>
-                    <li> <a href="#"></a>Starplus</li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Experiencia</a>
-                <ul class="menuVertical">
-                    <li> <a href="#"></a>seccion exp</li>
-                </ul>
+    <!-- nublar la pagina antes de ingresar -->
+    <div id="overlay">
+        <h1 id="mensajeBienvenida">Bienvenido a mi <br> portfolio!</h1>
+        <button id="ingresar-btn">Ingresar aquí</button>
+    </div>
 
-            </li>
+    <script>
+        document.getElementById('ingresar-btn').addEventListener('click', function () {
+            document.getElementById('overlay').style.display = 'none';
+        });
+    </script>
+    <!-- fin nublar pagina -->
 
-            <li>
-                <a href="#">Proyectos</a>
-                <ul class="menuVertical">
-                    <li> <a href="#"></a>seccion proy</li>
-                </ul><br>
-            </li>
-        </ul>
-    </nav>
     <header>
+        <container class="menu">
+            <p class="logo">Porfolio!</p>
+            <nav>
+                <a href="#aboutme">About</a>
+                <a href="#Habilidades">Habilidades y herramientas</a>
+                <a href="#Experiencia">Experiencia</a>
+                <a href="#Proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </container>
 
-        <div class="container">
+
+        <div class="containerNom">
             <h2 style="color: azure;">Juan Manuel Gauna</h2>
         </div>
-        <div class="item1">
-            <h3>Fullstack <br> developer</h3>
-
+        <div>
+            <h2>Fullstack developer</h2>
         </div>
-        <div class="item2">
+
+        <div>
             <img id="fotopersona" src="img/JuanGauna.png" width="200" />
         </div>
-        <h4>"Building the future, one line of code at a time."</h4>
 
-        <div class="descripcion">Apasionado de la
-            tecnología con una sólida formación en el desarrollo
-            de software, la informática y una exitosa trayectoria
-            en diversos aspectos del campo tecnológico. Mi enfoque
-            personal se centra en ofrecer
-            soluciones informáticas innovadoras y eficientes con
-            estudios que abarcan desde el respaldo en servicio técnico de
-            hardware, el análisis de sistemas, programación o
-            el diseño gráfico.</div>
-            
+        <p class="slogan">"Building the future, one line of code at a time."</p>
+
     </header>
+    <!-- inicio reforma about me -->
+    <section id="aboutme">
+        <div class="container">
+
+            <h2>Acerca de mí</h2>
+            <p>Soy un apasionado de la
+                tecnología con una sólida formación en el desarrollo
+                de software, investigación en el campo de la informática y una exitosa trayectoria
+                en diversos aspectos del campo tecnológico. Mi enfoque
+                personal se centra en ofrecer
+                soluciones informáticas innovadoras y eficientes con
+                estudios que abarcan desde el respaldo en servicio técnico en
+                hardware, análisis de sistemas, programación o
+                diseño gráfico.</p>
+        </div>
+    </section>
+    <!-- fin reforma -->
+    <section id="Habilidades">
+        <div class="container">
+            <div class="img-container"></div>
+
+            <h2>Habilidades & herramientas<br></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore, adipisci. Corporis temporibus dolorem numquam
+                consequatur facere at, doloribus non laborum explicabo
+                sequi dolore voluptatum magni, itaque cupiditate eveniet
+                beatae laudantium!</p>
+        </div>
+    </section>
+    <section id="Experiencia">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <div class="carta">
+                <h3>Empresa A</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+                    dicta natus autem fuga pariatur deleniti, mollitia excepturi
+                    reprehenderit saepe asperiores enim dolores odio velit repellat
+                    obcaecati harum consequuntur voluptate adipisci!</p>
+            </div>
+            <div class="carta">
+                <h3>Empresa B</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+                    dicta natus autem fuga pariatur deleniti, mollitia excepturi
+                    reprehenderit saepe asperiores enim dolores odio velit repellat
+                    obcaecati harum consequuntur voluptate adipisci!</p>
+            </div>
+        </div>
+    </section>
 
 
+    <section id="Proyectos">
+        <div class="container">
+            <h2>Proyectos</h2>
+            <div class="proyectos">
+                <div class="carta">
+                    <h3>Aplicaciones de escritorio</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
+                        reprehenderit saepe asperiores enim dolores odio velit repellat
+                        obcaecati harum consequuntur voluptate adipisci!</p>
+                </div>
+                <div class="carta">
+                    <h3>Página web personal</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
+                        reprehenderit saepe asperiores enim dolores odio velit repellat
+                        obcaecati harum consequuntur voluptate adipisci!</p>
+                </div>
+                <div class="carta">
+                    <h3>Porfolio</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
+                        reprehenderit saepe asperiores enim dolores odio velit repellat
+                        obcaecati harum consequuntur voluptate adipisci!</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Formulario de contacto -->
 
+        <section id="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
 
+                <!-- Mensaje de confirmación oculto -->
+                <div id="confirmationMessage" style="display: none;">
+                    <p>Mensaje enviado. ¡Muchas gracias!</p>
+                    <button id="confirmButton">Aceptar</button>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <a href="#titulo">Ir al inicio</a>
-        <br>
-        <a href="mailto:juanmanuelgauna@gmail.com">Contáctame aquí</a>
-        <p>Copyrigth Agosto de 2024</p>
-    </footer>
+        <script>
+            // Capturamos el envío del formulario
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evitar el envío del formulario
+
+                // Mostrar el mensaje de confirmación y ocultar el formulario
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('confirmationMessage').style.display = 'block';
+            });
+
+            // Acción al hacer clic en el botón de aceptar
+            document.getElementById('confirmButton').addEventListener('click', function () {
+                document.getElementById('confirmationMessage').style.display = 'none';
+            });
+        </script>
+
+        <footer>
+            <a href="#aboutme">Ir al inicio</a><br>
+            <a href="mailto:juanmanuelgauna@gmail.com">Contáctame aquí</a>
+            <p>&copy; Copyrigth Agosto de 2024</p>
+            <div class="container">
+            </div>
+        </footer>
+
 </body>
 
 </html>
