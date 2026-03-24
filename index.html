@@ -1,188 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title>Portfolio Juan Manuel Gauna</title>
-    <link rel="stylesheet" href="estilos/styleindex.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Juan Manuel Gauna 🧑‍💻</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#09f">
+    <meta name="description" content="Portfolio de Juan Manuel Gauna de la ciudad de San Francisco, Córdoba, Argentina, Fullstack developer y sistemas de información.">
+    <link rel="icon" type="image/jpg" href="img/juangauna.jpg">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- nublar la pagina antes de ingresar -->
-    <div id="overlay">
-        <h1 id="mensajeBienvenida">Bienvenido a mi <br> portfolio!</h1>
-        <button id="ingresar-btn">Ingresar aquí</button>
-    </div>
 
-    <script>
-        document.getElementById('ingresar-btn').addEventListener('click', function () {
-            document.getElementById('overlay').style.display = 'none';
-        });
-    </script>
-    <!-- fin nublar pagina -->
+    <header class="bg-6">
+        <audio autoplay src="sound/inicio.wav"></audio>
+        
+        <nav class="barraSuperior">
+            <a href="#aboutme" data-lang="acerca">Acerca de mí</a>
+            <a href="#experiencia" data-lang="experiencia">Experiencia</a>
+            <a href="#proyectos" data-lang="proyectos">Proyectos realizados</a>
+            <a href="https://www.linkedin.com/in/juanmanuelgauna" target="_blank" rel="noopener noreferrer">MyLinkedIn</a>
+            <a href="#contacto" data-lang="contacto">Contacto</a>
 
-    <header>
-        <div class="menuAcciones">
-        <container class="menu">
-            <p class="logo">Porfolio!</p>
-            <nav>
-                <a href="#aboutme">About</a>
-                <a href="#Habilidades">Habilidades y herramientas</a>
-                <a href="#Experiencia">Experiencia</a>
-                <a href="#Proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </container>
-        </div>
+            <a href="#" onclick="cambiarIdioma('es')">🇦🇷</a>
+            <a href="#" onclick="cambiarIdioma('en')">🇺🇸</a>
+        </nav>
 
-
-        <div class="containerNom">
-            <h2 style="color: azure;">Juan Manuel Gauna</h2>
-        </div>
-        <div>
+        <div class="hero-content">
+            <div class="glitch" data-text="Portfolio">Portfolio</div>
+            <h1 class="nombrePropio">Juan Manuel Gauna</h1>
             <h2>Fullstack developer</h2>
+            <p class="slogan">"Building the future, one line of code at a time."</p>
         </div>
-
-        <div>
-            <img id="fotopersona" src="img/JuanGauna.png" width="200" />
-        </div>
-
-        <p class="slogan">"Building the future, one line of code at a time."</p>
-
     </header>
-    <!-- inicio reforma about me -->
-    <section id="aboutme">
-        <div class="container">
 
-            <h2>Acerca de mí</h2>
-            <p>Soy un profesional en el ámbito de las tecnologías y los sistemas, con una sólida trayectoria en la implementación y desarrollo de soluciones tecnológicas. A lo largo de mi carrera, he trabajado con diversas herramientas y plataformas, liderando proyectos de software de diferentes tamaños y complejidades.
-
-                Me caracteriza un enfoque colaborativo y una fuerte orientación hacia el trabajo en equipo. Creo firmemente que el éxito se alcanza cuando todos los miembros de un equipo contribuyen con sus fortalezas y conocimientos, y siempre estoy dispuesto a ofrecer apoyo y compartir mis experiencias para lograr los objetivos comunes. Disfruto tanto de enseñar como de aprender de los demás, lo que me permite enriquecer continuamente mis habilidades y conocimientos.
-                
-                Soy un firme defensor del aprendizaje continuo, siempre en busca de nuevos retos y oportunidades que me permitan salir de mi zona de confort y expandir mis capacidades. Mi motivación para seguir creciendo es constante, y estoy comprometido con mantenerme actualizado en un campo que evoluciona rápidamente.</p>
-        </div>
-    </section>
-    <!-- fin reforma -->
-    <section id="Habilidades">
-        <div class="container">
-            <div class="img-container"></div>
-
-            <h2>Habilidades & herramientas<br></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Tempore, adipisci. Corporis temporibus dolorem numquam
-                consequatur facere at, doloribus non laborum explicabo
-                sequi dolore voluptatum magni, itaque cupiditate eveniet
-                beatae laudantium!</p>
-        </div>
-    </section>
-    <section id="Experiencia">
-        <div class="container">
-            <h2>Experiencia</h2>
-            <div class="carta">
-                <h3>Empresa A</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-                    dicta natus autem fuga pariatur deleniti, mollitia excepturi
-                    reprehenderit saepe asperiores enim dolores odio velit repellat
-                    obcaecati harum consequuntur voluptate adipisci!</p>
-            </div>
-            <div class="carta">
-                <h3>Empresa B</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-                    dicta natus autem fuga pariatur deleniti, mollitia excepturi
-                    reprehenderit saepe asperiores enim dolores odio velit repellat
-                    obcaecati harum consequuntur voluptate adipisci!</p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="Proyectos">
-        <div class="container">
-            <h2>Proyectos</h2>
-            <div class="proyectos">
-                <div class="carta">
-                    <h3>Aplicaciones de escritorio</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
-                        reprehenderit saepe asperiores enim dolores odio velit repellat
-                        obcaecati harum consequuntur voluptate adipisci!</p>
-                </div>
-                <div class="carta">
-                    <h3>Página web personal</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
-                        reprehenderit saepe asperiores enim dolores odio velit repellat
-                        obcaecati harum consequuntur voluptate adipisci!</p>
-                </div>
-                <div class="carta">
-                    <h3>Porfolio</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-                        dicta natus autem fuga pariatur deleniti, mollitia excepturi
-                        reprehenderit saepe asperiores enim dolores odio velit repellat
-                        obcaecati harum consequuntur voluptate adipisci!</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Formulario de contacto -->
-
-        <section id="contacto">
-            <div class="container">
-                <h2>Contacto</h2>
-                <form id="contactForm" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-
-                <!-- Mensaje de confirmación oculto -->
-                <div id="confirmationMessage" style="display: none;">
-                    <p>Mensaje enviado. ¡Muchas gracias!</p>
-                    <button id="confirmButton">Aceptar</button>
-                </div>
-            </div>
+    <main>
+        <section id="aboutme" class="perfil-container">
+            <img class="perfil-foto" width="200" title="Juan Manuel Gauna" alt="Retrato de Juan Manuel Gauna" src="img/JuanGauna.png">
+            <p class="slogan-perfil" data-lang="descripcion">
+                “¡Bienvenido a mi espacio digital! En este sitio comparto una selección de mi experiencia, proyectos y áreas de 
+                especialización. Aquí encontrarás un panorama general de mis conocimientos, disciplinas y capacidades dentro del 
+                mundo de las <strong>tecnologías</strong> y los <strong>sistemas</strong>.
+                Cada sección refleja mi forma de abordar los desafíos: combinando análisis, desarrollo y soluciones prácticas 
+                orientadas a resultados. Este portfolio representa una muestra de mi trabajo y de mi recorrido profesional, 
+                entendiendo que mis habilidades y experiencias van más allá de lo que aquí se presenta y continúan ampliándose 
+                con cada nuevo proyecto.
+            </p>
         </section>
 
-        <script>
-            // Capturamos el envío del formulario
-            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                event.preventDefault(); // Evitar el envío del formulario
+        <section id="experiencia" class="perfil-container">
+            <h2 data-lang="experiencia">Experiencia</h2>
+            <p data-lang="expIntro">
+                A lo largo de mi trayectoria profesional, he tenido la oportunidad de trabajar en una variedad de proyectos y roles
+                dentro del ámbito tecnológico...
+            </p>
+            
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3 data-lang="exp1Title">Desarrollo de Aplicaciones Informáticas</h3>
+                <p class="experiencia-content"data-lang="exp1Desc">Durante mi paso por diversas empresas, trabajé en el desarrollo de aplicaciones informáticas...</p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3 data-lang="exp2Title">Laboratorio de Computación para Adultos -Fundador y Docente-</h3>
+                <p class="experiencia-content"data-lang="exp2Desc">Como fundador del laboratorio de computación para adultos en EEMPA 1062...</p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3 data-lang="exp3Title">Administración Gerencial y Sistemas de Información</h3>
+                <p class="experiencia-content"data-lang="exp3Desc">En Careglio Hnos. Srl., desempeñé funciones clave en administración gerencial...</p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3 data-lang="exp4Title">Ingeniería en Sistemas de Información - UTN</h3>
+                <p class="experiencia-content"data-lang="exp4Desc">Actualmente, me encuentro cursando el cuarto año avanzado de la carrera de Ingeniería...</p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3 data-lang="exp5Title">Empresa de servicios informáticos y tecnológicos.</h3>
+                <p class="experiencia-content"data-lang="exp5Desc">Actualmente, soy propietario de un emprendimiento iniciado hace 12 años...</p>
+            </article>
+        </section>
 
-                // Mostrar el mensaje de confirmación y ocultar el formulario
-                document.getElementById('contactForm').style.display = 'none';
-                document.getElementById('confirmationMessage').style.display = 'block';
-            });
+        <section class="tecnologias-container">
+            <h2 data-lang="tecnologias">Tecnologías puestas en práctica</h2>
+            <ul class="lista-tecnologias">
+                <li>HTML - CSS</li>
+                <li>React</li>
+                <li>C# - C++</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>HTTP/REST</li>
+                <li>GitHub</li>
+                <li>Copilot</li>
+                <li>LLMs</li>
+                <li>T&QA</li>
+            </ul>
+        </section>
 
-            // Acción al hacer clic en el botón de aceptar
-            document.getElementById('confirmButton').addEventListener('click', function () {
-                document.getElementById('confirmationMessage').style.display = 'none';
-            });
-        </script>
+        <section class="linkedin-link-section">
+            <a href="https://www.linkedin.com/in/juanmanuelgauna" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+                Ir a mi LinkedIn <i class="bi bi-linkedin"></i>
+            </a>
+        </section>
 
-        <footer>
-            <a href="#aboutme">Ir al inicio</a><br>
-            <a href="mailto:juanmanuelgauna@gmail.com">Contáctame aquí</a>
-            <p>&copy; Copyrigth Agosto de 2024</p>
-            <div class="container">
-            </div>
-        </footer>
+        <section id="proyectos" class="perfil-container">
+            <h2 data-lang="proyectos">Algunos de mis proyectos realizados</h2>
+            <p data-lang="projIntro">
+                En mi recorrido profesional, he llevado adelante diversos proyectos que reflejan mi compromiso con la innovación...
+            </p>
 
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3>Portfolio personal</h3>
+                <p class="experiencia-content">
+                    <img src="img/capturasProyectos/Captura_portfolio.png" alt="Captura del Portfolio" style="width: 100%; height: auto;">
+                </p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3>App React - Carrito de compras</h3>
+                <p class="experiencia-content">
+                    <img src="img/capturasProyectos/Captura_React.png" alt="Captura de App React" style="width: 100%; height: auto;">
+                </p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3>Filtro promediador Transformada en Z</h3>
+                <p class="experiencia-content">
+                    <img src="img/capturasProyectos/Captura_FiltroZ.png" alt="Captura de Filtro Z" style="width: 100%; height: auto;">
+                </p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3>Gestor Turnos</h3>
+                <p class="experiencia-content">
+                    <img src="img/capturasProyectos/Captura_GestorTurnos.png" alt="Captura Gestor de Turnos" style="width: 100%; height: auto;">
+                </p>
+            </article>
+            <article class="experiencia-item" onclick="toggleContent(this)">
+                <h3>Api REST Mercado Libre.</h3>
+                <p class="experiencia-content">
+                   <img src="img/capturasProyectos/Captura_ML.png" alt="Captura API Mercado Libre" style="width: 100%; height: auto;">
+                </p>
+            </article>
+        </section>
+
+        <section class="hobbies-container">
+            <h2 data-lang="acercaTitulo">Acerca de mí</h2>
+            <details>
+                <summary data-lang="about1Title">Mis "Hobbies"</summary>
+                <p data-lang="about1Desc">Me gusta mucho viajar, pasar tiempo con mi familia y amigos, conocer gente, tocar la guitarra,
+                    cantar, cocinar y hacer deporte! <strong>Creo que la vida se basa en pequeños grandes momentos.</strong> 😁
+                </p>
+            </details>
+            <details>
+                <summary data-lang="about2Title">Mi segunda casa.</summary>
+                <p data-lang="about2Desc">Por supuesto, mi amada <strong>Universidad Tecnológica Nacional</strong> (UTN San Francisco), fuente
+                    de conocimiento y progreso incalculable. 🏛️</p>
+            </details>
+            <details>
+                <summary data-lang="about3Title">La vida misma.</summary>
+                <p data-lang="about3Desc">A seguir! Avant courage et gloire! Hasta el último suspiro! Sé un guerrero siempre y que ni el viento
+                    más poderoso te derrote. <strong>¡Tú puedes!</strong> Levántate y sigue adelante.💪</p>
+            </details>
+        </section>
+
+        <section id="contacto" class="formulario">
+            <button id="show" class="btn-contacto">➡️ Contáctame 📬</button>
+
+            <dialog id="dialog" class="modal-delicado">
+                <button id="close" class="btn-cerrar" aria-label="Cerrar">✖</button>
+                
+                <div class="modal-content">
+                    <h2 data-lang="formularioContacto">Espero tu mensaje</h2>
+                    
+                    <form action="https://formspree.io/f/mqeyodde" method="POST">
+                        <input type="hidden" name="_next" value="#">
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <div class="input-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name" data-lang="nombre">Tu Nombre *</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email" data-lang="email">Tu Email *</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="empresa" name="empresa" placeholder=" ">
+                            <label for="empresa" data-lang="empresa">Empresa / Organización (Opcional)</label>
+                        </div>
+
+                        <div class="input-group">
+                            <select id="asunto" name="asunto" class="select-elegante">
+                                <option value="Sin especificar" data-lang="opt1" selected>Selecciona un asunto (Opcional)</option>
+                                <option value="Desarrollo de Software" data-lang="opt2">Desarrollo de Software / Web</option>
+                                <option value="Soporte IT" data-lang="opt3">Consultoría o Soporte IT</option>
+                                <option value="Propuesta Laboral" data-lang="opt4">Propuesta Laboral</option>
+                                <option value="Networking" data-lang="opt5">Networking / Tomar unos mates 🧉</option>
+                                <option value="Other" data-lang="opt6">Otra consulta</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="mensaje" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="mensaje" data-lang="mensajeTexto">Tu Mensaje *</label>
+                        </div>
+
+                        <button type="submit" class="btn-enviar" data-lang="enviar">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    
+    <footer>
+        <br />
+        <a href="#" data-lang="inicio">🏠 Ir al inicio</a><br>
+        <p>&copy; Copyright 2024</p>
+    </footer>
 </body>
 
 </html>

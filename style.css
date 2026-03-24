@@ -1,0 +1,515 @@
+/* =========================================
+   VARIABLES Y CONFIGURACIÓN BASE
+   ========================================= */
+   :root {
+    --color-neon: #09f;
+    --color-neon-alt: #0ff;
+    --bg-dark: #000000;
+    --bg-light: #ffffff;
+    --text-dark: #111111;
+    --text-light: #f0f0f0;
+}
+
+body {
+    /* Puedes descomentar esto si prefieres que toda la web tenga esta fuente */
+    /* font-family: 'Merienda', sans-serif; */
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Hace que los clics en el menú bajen suavemente */
+}
+
+.nombrePropio, h2, h3, h4 {
+    color: var(--text-dark);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+.barraSuperior {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px); /* Efecto cristal moderno */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que no se rompa en móviles */
+    gap: 10px;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-neon);
+    box-shadow: 0 4px 15px rgba(0, 153, 255, 0.2);
+}
+
+.barraSuperior a {
+    color: var(--text-dark);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.barraSuperior a:hover {
+    background: var(--bg-dark);
+    color: var(--color-neon);
+    text-shadow: 0 0 5px var(--color-neon);
+}
+
+/* =========================================
+   HEADER & EFECTO GLITCH
+   ========================================= */
+.bg-6 {
+    background-color: var(--bg-dark);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+h1.nombrePropio, .bg-6 h2 {
+    color: var(--text-light); /* Arreglado: Antes era negro sobre negro */
+    text-shadow: 0 0 10px rgba(0, 153, 255, 0.8), 0 0 20px #fff;
+    margin: 10px 0;
+}
+
+p.slogan {
+    color: var(--text-light); /* Arreglado: Antes era negro sobre negro */
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px var(--color-neon);
+    font-style: italic;
+}
+
+/* Glitch Effect */
+.glitch {
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+    font-family: 'Merienda', cursive;
+    margin: 8px;
+    display: inline-block;
+}
+
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 red;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 2px 0 blue;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+/* (Animaciones Glitch sin cambios, estaban perfectas) */
+@keyframes noise-anim {
+    0% { clip: rect(51px, 9999px, 28px, 0); } 5% { clip: rect(70px, 9999px, 19px, 0); } 10% { clip: rect(92px, 9999px, 13px, 0); } 15% { clip: rect(85px, 9999px, 49px, 0); } 20% { clip: rect(45px, 9999px, 56px, 0); } 25% { clip: rect(26px, 9999px, 31px, 0); } 30% { clip: rect(62px, 9999px, 73px, 0); } 35% { clip: rect(34px, 9999px, 11px, 0); } 40% { clip: rect(26px, 9999px, 61px, 0); } 45% { clip: rect(34px, 9999px, 71px, 0); } 50% { clip: rect(35px, 9999px, 69px, 0); } 55% { clip: rect(92px, 9999px, 81px, 0); } 60% { clip: rect(26px, 9999px, 85px, 0); } 65% { clip: rect(2px, 9999px, 68px, 0); } 70% { clip: rect(54px, 9999px, 79px, 0); } 75% { clip: rect(35px, 9999px, 85px, 0); } 80% { clip: rect(70px, 9999px, 60px, 0); } 85% { clip: rect(32px, 9999px, 26px, 0); } 90% { clip: rect(94px, 9999px, 53px, 0); } 95% { clip: rect(99px, 9999px, 92px, 0); } 100% { clip: rect(42px, 9999px, 27px, 0); }
+}
+@keyframes noise-anim-2 {
+    0% { clip: rect(21px, 9999px, 49px, 0); } 5% { clip: rect(27px, 9999px, 52px, 0); } 10% { clip: rect(21px, 9999px, 70px, 0); } 15% { clip: rect(65px, 9999px, 25px, 0); } 20% { clip: rect(24px, 9999px, 10px, 0); } 25% { clip: rect(61px, 9999px, 64px, 0); } 30% { clip: rect(34px, 9999px, 47px, 0); } 35% { clip: rect(46px, 9999px, 93px, 0); } 40% { clip: rect(46px, 9999px, 9px, 0); } 45% { clip: rect(67px, 9999px, 36px, 0); } 50% { clip: rect(72px, 9999px, 20px, 0); } 55% { clip: rect(79px, 9999px, 26px, 0); } 60% { clip: rect(13px, 9999px, 87px, 0); } 65% { clip: rect(10px, 9999px, 25px, 0); } 70% { clip: rect(85px, 9999px, 11px, 0); } 75% { clip: rect(94px, 9999px, 35px, 0); } 80% { clip: rect(50px, 9999px, 86px, 0); } 85% { clip: rect(74px, 9999px, 67px, 0); } 90% { clip: rect(1px, 9999px, 40px, 0); } 95% { clip: rect(3px, 9999px, 48px, 0); } 100% { clip: rect(90px, 9999px, 23px, 0); }
+}
+
+/* =========================================
+   CONTENEDORES PRINCIPALES
+   ========================================= */
+.perfil-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-image: url('img/fondo3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo de resguardo si falla la imagen */
+    background-blend-mode: overlay; /* Mejora la legibilidad del texto sobre la imagen */
+}
+
+/* Sección de "Acerca de mí" */
+#aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.perfil-foto {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Foto circular más moderna */
+    box-shadow: 0 0 15px var(--color-neon), 0 0 20px var(--color-neon-alt);
+    border: 4px solid var(--bg-dark);
+}
+
+.slogan-perfil {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    text-shadow: 0 0 1px #fff;
+}
+
+/* =========================================
+   ACORDEÓN EXPERIENCIA Y PROYECTOS
+   ========================================= */
+.experiencia-item {
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-left: 5px solid var(--color-neon);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experiencia-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 153, 255, 0.3);
+}
+
+.experiencia-item h3 {
+    margin: 0;
+    text-align: left;
+    font-size: 1.2rem;
+    color: var(--bg-dark);
+}
+
+/* Corrección vital: removido el position absolute */
+.experiencia-content {
+    display: none; 
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    color: #444;
+    line-height: 1.5;
+}
+
+.experiencia-content.active {
+    display: block; /* La clase que agregará Javascript */
+}
+
+.experiencia-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.experiencia-content img:hover {
+    transform: scale(1.05); /* Escala suave en lugar de 2.2 */
+}
+
+/* =========================================
+   TECNOLOGÍAS (Nuevo estilo de etiquetas)
+   ========================================= */
+.tecnologias-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.lista-tecnologias {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.lista-tecnologias li {
+    background: var(--bg-dark);
+    color: var(--color-neon);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.lista-tecnologias li:hover {
+    background: var(--color-neon);
+    color: var(--bg-dark);
+    box-shadow: 0 0 20px var(--color-neon-alt);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   BOTONES Y ENLACES (LinkedIn, Contacto)
+   ========================================= */
+.linkedin-link-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.linkedin-btn, button, input[type="submit"] {
+    display: inline-block;
+    background: linear-gradient(45deg, rgb(34, 36, 42), rgb(72, 66, 255));
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.linkedin-btn:hover, button:hover, input[type="submit"]:hover {
+    box-shadow: 0 0 15px var(--color-neon), 0 0 25px var(--color-neon-alt);
+    transform: scale(1.05);
+}
+
+/* =========================================
+   HOBBIES (Etiqueta details)
+   ========================================= */
+.hobbies-container {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 20px;
+}
+
+details {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    color: var(--bg-dark);
+    font-size: 1.1rem;
+    outline: none;
+}
+
+details p {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+/* =========================================
+   SECCIÓN DEL BOTÓN DE CONTACTO (Fondo)
+   ========================================= */
+   .formulario {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url("img/fondo_contacto.png"); /* Asegúrate de que esta imagen exista */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+/* =========================================
+   MODAL DE CONTACTO (Estilo Elegante/Neón)
+   ========================================= */
+   .modal-delicado {
+    border: 1px solid rgba(0, 153, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.7), 0 0 20px rgba(0, 153, 255, 0.2);
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+    background: rgba(10, 10, 12, 0.95); /* Fondo muy oscuro y sutil */
+    color: var(--text-light);
+    position: relative; /* Para ubicar la X de cerrar */
+}
+
+/* El fondo borroso detrás del modal */
+.modal-delicado::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+/* La 'X' para cerrar en la esquina superior derecha */
+.btn-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0;
+    padding: 5px;
+    box-shadow: none;
+}
+
+.btn-cerrar:hover {
+    color: var(--color-neon);
+    transform: scale(1.2);
+    box-shadow: none;
+    background: transparent;
+}
+
+.modal-content h2 {
+    color: var(--color-neon);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* Contenedor de cada campo para el efecto de etiqueta flotante */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Estilo delicado: solo una línea abajo, sin bordes a los lados */
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* La etiqueta (label) por defecto descansa sobre la línea */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 1rem;
+    color: #888;
+    pointer-events: none; /* Para que el clic pase al input de atrás */
+    transition: 0.3s ease all;
+}
+
+/* MAGIA: Si el input está en foco, o si ya tiene texto escrito, la etiqueta sube */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--color-neon);
+    font-weight: bold;
+}
+
+/* La línea inferior se enciende al escribir */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-bottom: 2px solid var(--color-neon);
+}
+
+textarea {
+    resize: vertical; /* Solo permite agrandar hacia abajo */
+    font-family: inherit;
+}
+
+/* Botón de envío que ocupa todo el ancho */
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--bg-dark);
+    color: var(--color-neon);
+    border-top: 2px solid var(--color-neon);
+    box-shadow: 0 -5px 15px rgba(0, 153, 255, 0.2);
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Móviles)
+   ========================================= */
+@media (max-width: 768px) {
+    #aboutme {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .perfil-foto {
+        margin-bottom: 20px;
+    }
+
+    .glitch {
+        font-size: 2rem;
+    }
+
+    h1.nombrePropio {
+        font-size: 1.5rem;
+    }
+}
+
+/* =========================================
+   ESTILO DEL SELECT (Asunto)
+   ========================================= */
+   .select-elegante {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #888;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    transition: border-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    appearance: none; /* Quita la flecha por defecto en algunos navegadores */
+}
+
+.select-elegante:focus {
+    border-bottom: 2px solid var(--color-neon);
+    color: var(--color-neon);
+}
+
+.select-elegante option {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
